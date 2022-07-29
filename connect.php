@@ -1,8 +1,18 @@
 <?php 
+    // Enable us to use Headers
+    ob_start();
+    // Set sessions
+    if(!isset($_SESSION)) {
+        session_start();
+    }
+    $hostname = "localhost";
+    $username = "root";
+    $password = "password";
+    $dbname = "budgetapp_db";
+    
+    $connection = mysqli_connect($hostname, $username, $password, $dbname) or die("Database connection not established.");
 
-$conn = mysqli_connect("localhost", "root", "Budget@pp22", "budgetapp_db");
-
-if(!$conn){
-    echo "MySQL Error: " . mysqli_connect_error();
-}
-
+    if($connection){
+        echo 'Well connected!';
+    }
+?>
