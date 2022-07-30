@@ -28,7 +28,7 @@ include ("../includes/topfile.php");
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password" class="form-control">
                 </div>
-                <button type="submit" name="submit" id="submit" class="btn btn-outline-primary btn-lg btn-block"></button>
+                <button type="submit" name="submit" id="submit" class="btn btn-outline-primary btn-lg btn-block">Register</button>
             </form>
         </div>
     </div>
