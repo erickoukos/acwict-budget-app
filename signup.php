@@ -1,5 +1,5 @@
 <?php
-include ("../includes/topfile.php");
+include ("includes/topfile.php");
 
 ?>
 
@@ -34,6 +34,6 @@ include ("../includes/topfile.php");
     </div>
 </div>
 <?php
-include ("../includes/bottomfile.php");
+include ("includes/bottomfile.php");
 
 ?>
