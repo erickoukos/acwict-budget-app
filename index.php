@@ -3,6 +3,8 @@ include("includes/topfile.php");
 // echo "Cookies: " . $_COOKIE['auth_id'];
 include("config/connect.php");
 include("validation.php");
+include("header.php");
+include("controllers/signin.php");
 
 ?>
 
@@ -14,6 +16,13 @@ include("validation.php");
         <div class="inner-block">
             <form action="" method="post">
                 <h3>Login to Your Account</h3>
+
+                <?php echo $accountNotExistErr;  ?>
+                <?php echo $emailPwdErr;  ?>
+                <?php echo $verificationRequiredErr;  ?>
+                <?php echo $email_empty_err;  ?>
+                <?php echo $pass_empty_err;  ?>
+
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" name="email_signin" id="email_signin" class="form-control">

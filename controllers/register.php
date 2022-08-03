@@ -12,7 +12,7 @@
     // Set empty form vars for validation mapping
     $_first_name = $_last_name = $_email = $_mobile_number = $_password = "";
     if(isset($_POST["submit"])) {
-        $firstname     = $_POST["firstname"];
+        $firstname     = $_POST["firstname"]; 
         $lastname      = $_POST["lastname"];
         $email         = $_POST["email"];
         $mobilenumber  = $_POST["mobilenumber"];
