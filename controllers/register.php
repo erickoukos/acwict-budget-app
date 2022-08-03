@@ -1,7 +1,7 @@
 <?php
    
     // Database connection
-    include('config/connect.php');
+    include('./config/connect.php');
     // Swiftmailer lib
     require_once './lib/vendor/autoload.php';
     
@@ -62,7 +62,7 @@
                 }
                 if(!preg_match("/^(?=.*\d)(?=.*[@#\-_$%^&+=§!\?])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z@#\-_$%^&+=§!\?]{6,20}$/", $_password)) {
                     $_passwordErr = '<div class="alert alert-danger">
-                             Password should be between 6 to 20 charcters long, contains atleast one special chacter, lowercase, uppercase and a digit.
+                             Password should be between 6 to 20 characters long, contains atleast one special chacter, lowercase, uppercase and a digit.
                         </div>';
                 }
                 
@@ -72,7 +72,7 @@
                  (preg_match("/^(?=.*\d)(?=.*[@#\-_$%^&+=§!\?])(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z@#\-_$%^&+=§!\?]{8,20}$/", $_password))){
                     // Generate random activation token
                     $token = md5(rand().time());
-                    // Password hash
+                    // Password hash 
                     $password_hash = password_hash($password, PASSWORD_BCRYPT);
                     // Query
                     $sql = "INSERT INTO users (firstname, lastname, email, mobilenumber, password, token, is_active,
@@ -88,7 +88,7 @@
                     // Send verification email
                     if($sqlQuery) {
                         $msg = 'Click on the activation link to verify your email. <br><br>
-                          <a href="http://localhost/acwict-budget-app/user_verificaiton.php?token='.$token.'"> Click here to verify email</a>
+                          <a href="http://localhost/acwict-budget-app/user_activation.php?token='.$token.'"> Click here to verify email</a>
                         ';
                         // Create the Transport
                         $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
