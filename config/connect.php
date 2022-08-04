@@ -17,6 +17,6 @@ if (!$conn)
     echo "MySQL Error: " . mysqli_connect_error();
 }
 
-// else{
-//     echo 'Connected successfully!';
-// }
+else{
+    echo 'Connected successfully!';
+}
