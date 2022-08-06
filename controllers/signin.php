@@ -1,7 +1,7 @@
 <?php
    
     // Database connection
-    include('../config/connect.php');
+    include('./config/connect.php');
     global $wrongPwdErr, $accountNotExistErr, $emailPwdErr, $verificationRequiredErr, $email_empty_err, $pass_empty_err;
     if(isset($_POST['login'])) {
         $email_signin        = $_POST['email_signin'];

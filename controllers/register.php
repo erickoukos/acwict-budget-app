@@ -1,7 +1,7 @@
 <?php
    
     // Database connection
-    include('../config/connect.php');
+    include('./config/connect.php');
     // Swiftmailer lib
     require_once './lib/vendor/autoload.php';
     
