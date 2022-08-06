@@ -10,13 +10,13 @@ if (!isset($_SESSION)){
     session_start();
 }
 
-$conn = mysqli_connect("localhost","root","","budget_db");
+$connection = mysqli_connect("localhost","root","","budget_db");
 
-if (!$conn)
+if (!$connection)
 {
     echo "MySQL Error: " . mysqli_connect_error();
 }
 
-else{
-    echo 'Connected successfully!';
-}
+// else{
+//     echo 'Connected successfully!';
+// }
