@@ -107,7 +107,7 @@
                           
                         if(!$result){
                             $email_verify_err = '<div class="alert alert-danger">
-                                    Verification email coud not be sent!
+                                    Verification email could not be sent!
                             </div>';
                         } else {
                             $email_verify_success = '<div class="alert alert-success">

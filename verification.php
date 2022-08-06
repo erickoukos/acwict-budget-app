@@ -1,4 +1,4 @@
-<?php include('./controllers/user_activation.php'); ?>
+<?php include('controllers/user_activation.php'); ?>
 
     <div class="container">
         <div class="jumbotron text-center">
