@@ -91,9 +91,9 @@
                           <a href="http://localhost/acwict-budget-app/user_activation.php?token='.$token.'"> Click here to verify email</a>
                         ';
                         // Create the Transport
-                        $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
-                        ->setUsername('erickoukos@gmail.com')
-                        ->setPassword('your_email_password');
+                        $transport = (new Swift_SmtpTransport('mail.riconets.com', 465, 'ssl'))
+                        ->setUsername('no-reply@riconets.com')
+                        ->setPassword('#M*Z~N]X!Pdi');
                         // Create the Mailer using your created Transport
                         $mailer = new Swift_Mailer($transport);
                         // Create a message
