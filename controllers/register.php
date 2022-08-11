@@ -3,7 +3,7 @@
     // Database connection
     include('./config/connect.php');
     // Swiftmailer lib
-    require_once './lib/vendor/autoload.php';
+    require_once('./lib/vendor/autoload.php');
     
     // Error & success messages
     global $success_msg, $email_exist, $f_NameErr, $l_NameErr, $_emailErr, $_mobileErr, $_passwordErr;
@@ -88,20 +88,24 @@
                     // Send verification email
                     if($sqlQuery) {
                         $msg = 'Click on the activation link to verify your email. <br><br>
-                          <a href="http://localhost/acwict-budget-app/controllers/user_activation.php?token='.$token.'"> Click here to verify email</a>
-                        ';
+                          <a href="http://localhost/acwict-budget-app/controllers/verification.php?token='.$token.'"> Click here to verify email</a>';
                         // Create the Transport
-                        $transport = (new Swift_SmtpTransport('mail.riconets.com', 465, 'ssl'))
-                        ->setUsername('no-reply@riconets.com')
-                        ->setPassword('#M*Z~N]X!Pdi');
+                        $transport = (new Swift_SmtpTransport('mail.nncsevices.com', 465, 'ssl'))
+                        ->setUsername('no-reply@nncsevices.com')
+                        ->setPassword('(-IwIDYzk)Sl');
+
                         // Create the Mailer using your created Transport
                         $mailer = new Swift_Mailer($transport);
+
+
                         // Create a message
                         $message = (new Swift_Message('Please Verify Email Address!'))
                         ->setFrom([$email => $firstname . ' ' . $lastname])
                         ->setTo($email)
                         ->addPart($msg, "text/html")
                         ->setBody('Hello! User');
+
+                        
                         // Send the message
                         $result = $mailer->send($message);
                           

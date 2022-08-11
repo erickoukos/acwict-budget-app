@@ -32,6 +32,8 @@ include("controllers/signin.php");
                     <input type="password" name="password_signin" id="password_signin" class="form-control">
                 </div>
                 <button type="submit" name="login" id="sign_in" class="btn btn-outline-primary btn-lg btn-block">Login</button>
+
+                <button class="btn btn-primary btn-lg btn-block button-link"><a href='http://localhost/acwict-budget-app/forgot_password.php' style="text-decoration: none; color: white;" >Reset Password</a></button>
             </form>
         </div>
     </div>

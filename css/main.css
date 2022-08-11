@@ -23,7 +23,9 @@
   .btn-outline-primary:hover {
     background-color: #1833FF;
     color: #ffffff;
+    text-decoration: none;
   }
+
   .vertical-center {
     display: flex;
     text-align: left;

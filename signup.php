@@ -1,6 +1,7 @@
 <?php
 include("includes/topfile.php");
 include("controllers/register.php");
+include('header.php')
 ?>
 
 <div class="budget-app">

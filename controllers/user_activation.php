@@ -1,6 +1,6 @@
 <?php
     // Database connection
-    include('../config/connect.php');
+    include('./config/connect.php');
     global $email_verified, $email_already_verified, $activation_error;
     // GET the token = ?token
     if(!empty($_GET['token'])){
