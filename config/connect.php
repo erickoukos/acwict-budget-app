@@ -20,3 +20,5 @@ if (!$connection)
 // else{
 //     echo 'Connected successfully!';
 // }
+
+date_default_timezone_set('Africa/Nairobi');
