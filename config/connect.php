@@ -17,8 +17,8 @@ if (!$connection)
     echo "MySQL Error: " . mysqli_connect_error();
 }
 
-// else{
-//     echo 'Connected successfully!';
-// }
+else{
+    echo 'Connected successfully!';
+}
 
 date_default_timezone_set('Africa/Nairobi');

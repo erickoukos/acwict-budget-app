@@ -7,9 +7,6 @@ include("header.php");
 include("controllers/signin.php");
 
 ?>
-
-<h1>Welcome Back!</h1>
-
 <!-- Login Form -->
 <div class="budget-app">
     <div class="vertical-center">
